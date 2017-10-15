@@ -12,7 +12,6 @@ const App = () => (
   <View style={{ flex: 1 }}>
     <Header headerText={'SMART HOME'} />
     <AlbumList />
-   
   </View>
 );
 
