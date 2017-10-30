@@ -78,17 +78,14 @@ return (
 
    </Col>
  </Grid>
-  <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
-     Login with Facebook
-   </Icon.Button>
-  <Icon name="home" size={30} color="#4F8EF7" />
+
   </Card>
 
     );
 };
 const styles = {
       headerContentstyle: {
-            flexDirection: 'column' ,
+            flexDirection: 'column',
             justifyContent: 'space-around'
 
 
