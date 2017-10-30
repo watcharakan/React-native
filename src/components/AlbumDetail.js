@@ -1,18 +1,13 @@
 import React from 'react';
-import { Text, View, Image, Linking, TouchableNativeFeedback, Platform, TabBarIOS } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
-import Button from 'apsl-react-native-button';
+import { Button, Grid, Col, Row } from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
-
-
-
 const AlbumDetail = ({ album } ) =>{
-
     const { title, artist, thumbnail_image, image, url } = album;
-    const {thumbnailStyle,
+    const { thumbnailStyle,
            headerContentstyle,
                thumbnailContainerStyle,
                headrTextStyle,
@@ -38,30 +33,59 @@ return (
   <CardSection>
 
        <Image
-       style={ imageStyle }
+       style={imageStyle}
        source={{ uri: image }}/>
 
   </CardSection>
 
   <CardSection>
 
-        <Button
 
-        onPress={() => Linking.openURL(url) }>
-        Buy Now
-        </Button>
+
 
   </CardSection>
-  <Icon.Button name="facebook" backgroundColor="#3b5998">
-    <Text style={{fontFamily: 'Arial', fontSize: 15}}>Login with Facebook</Text>
-  </Icon.Button>
+  <Grid>
+   <Col>
+   <Row>
+   <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
+      Login with Facebook
+   </Icon.Button>
+   </Row>
+   <Row>
+     <Icon name="home" size={30} color="#4F8EF7" />
+   </Row>
+   <Row>
+   <Button
+     raised
+     icon={{ name: 'home', size: 32}}
+     buttonStyle={{backgroundColor: 'red', borderRadius: 10}}
+     textStyle={{textAlign: 'center'}}
+     title={`Welcome to\nReact Native Elements`}
+   /></Row>
+
+   </Col>
+   <Col>
+     <Row></Row>
+     <Row></Row>
+     <Row></Row>
+
+   </Col>
+
+   <Col>
+     <Row></Row>
+     <Row></Row>
+     <Row></Row>
+
+   </Col>
+ </Grid>
+  <Icon.Button name="facebook" backgroundColor="#3b5998" onPress={this.loginWithFacebook}>
+     Login with Facebook
+   </Icon.Button>
   <Icon name="home" size={30} color="#4F8EF7" />
   </Card>
 
     );
-
-
-} ;
+};
 const styles = {
       headerContentstyle: {
             flexDirection: 'column' ,
