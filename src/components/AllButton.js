@@ -1,12 +1,13 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Button, Grid, Col, Row, Icon } from 'react-native-elements';
+import { Button, Grid, Col, Row, Icon, Divider } from 'react-native-elements';
 
 
 const AllButton = () => {
 return (
 
   <Grid>
+  <Divider style={{ backgroundColor: 'blue' }} />
    <Col>
    <Row>
    <Button
@@ -17,15 +18,7 @@ return (
      title={'SMART \nMETER'}
    />
    </Row>
-   <Row>
-   <Button
-     raised
-     icon={{ name: 'md-speedometer', type: 'ionicon', size: 50 }}
-     buttonStyle={{ backgroundColor: 'red', borderRadius: 30 }}
-     textStyle={{ textAlign: 'center' }}
-     title={'SMART \nMETER'}
-   />
-   </Row>
+
    <Row>
    <Button
      raised
@@ -38,9 +31,26 @@ return (
 
    </Col>
    <Col>
-     <Row></Row>
-     <Row></Row>
-     <Row></Row>
+     <Row>
+
+     <Button
+       large
+       icon={{ name: 'md-speedometer', type: 'ionicon', size: 50 }}
+       buttonStyle={{ backgroundColor: 'red', borderRadius: 500 }}
+       textStyle={{ textAlign: 'center' }}
+       title={'SMART \nMETER'}
+     />
+     </Row>
+     <Row>
+     <Button
+       large
+       icon={{ name: 'md-speedometer', type: 'ionicon', size: 50 }}
+       buttonStyle={{ backgroundColor: 'red', borderRadius: 800 }}
+       textStyle={{ textAlign: 'center' }}
+       title={'SMART \nMETER'}
+     />
+     </Row>
+
 
    </Col>
 
